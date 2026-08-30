@@ -20,8 +20,8 @@ export const priceSlots: PriceSlot[] = [
   { id: "innova-12", category: "Innova", duration: "12 Hours", km: "150 KM", price: "₹1,500" },
   { id: "innova-24", category: "Innova", duration: "24 Hours", km: "300 KM", price: "₹2,500" },
 
-  { id: "7s-12", category: "7 Seater", duration: "12 Hours", km: "150 KM", price: "₹1,700" },
-  { id: "7s-24", category: "7 Seater", duration: "24 Hours", km: "300 KM", price: "₹3,000" },
+  { id: "7s-12", category: "7 Seater", duration: "12 Hours", km: "150 KM", price: "₹2,500" },
+  { id: "7s-24", category: "7 Seater", duration: "24 Hours", km: "300 KM", price: "₹4,000" },
 
   { id: "crysta-12", category: "Crysta", duration: "12 Hours", km: "150 KM", price: "₹3,000" },
   { id: "crysta-24", category: "Crysta", duration: "24 Hours", km: "300 KM", price: "₹4,500" },

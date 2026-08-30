@@ -5,9 +5,11 @@ import { SmartImage } from "@/components/SmartImage";
 import { Reveal } from "@/components/motion/Reveal";
 import { buttonClasses } from "@/components/ui/button";
 
-const premiumSlugs = ["innova", "innova-crysta", "fortuner-type-2", "fortuner-type-3", "thar", "thar-roxx"];
+const premiumSlugs = ["ertiga", "xl6", "innova", "innova-crysta", "fortuner-type-2", "fortuner-type-3", "thar", "thar-roxx"];
 
 const blurbs: Record<string, string> = {
+  ertiga: "A versatile 7-seater MPV perfect for city drives and weekend trips.",
+  xl6: "A premium 6-seater MPV offering enhanced comfort and cabin space.",
   innova: "Spacious and reliable 7-seater MPV for family and group travels.",
   "innova-crysta": "Room for the whole group on long comfortable drives.",
   "fortuner-type-2": "A commanding SUV built for highways and rough patches alike.",
