@@ -3,6 +3,11 @@ import { vehicleOptions } from "@/data/vehicles";
 import { durationOptions, rentalTypeOptions } from "@/data/pricing";
 import { business } from "@/data/business";
 
+/** Local date as YYYY-MM-DD, matching the value of an <input type="date">. */
+export function todayISO(): string {
+  return new Date().toLocaleDateString("en-CA");
+}
+
 export const bookingSchema = z.object({
   name: z.string().trim().min(2, "Please enter your name"),
   phone: z
@@ -15,7 +20,10 @@ export const bookingSchema = z.object({
   duration: z.enum(durationOptions as unknown as [string, ...string[]], {
     errorMap: () => ({ message: "Select a rental duration" }),
   }),
-  pickupDate: z.string().min(1, "Choose a pickup date"),
+  pickupDate: z
+    .string()
+    .min(1, "Choose a pickup date")
+    .refine((d) => d >= todayISO(), "Pickup date can't be in the past"),
   pickupTime: z.string().min(1, "Choose a pickup time"),
   rentalType: z.enum(rentalTypeOptions as unknown as [string, ...string[]], {
     errorMap: () => ({ message: "Select a rental type" }),

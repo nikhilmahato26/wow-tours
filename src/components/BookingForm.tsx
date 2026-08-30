@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2, MessageCircle } from "lucide-react";
-import { bookingSchema, type BookingValues, bookingWhatsappLink } from "@/lib/booking";
+import { bookingSchema, type BookingValues, bookingWhatsappLink, todayISO } from "@/lib/booking";
 import { vehicleOptions } from "@/data/vehicles";
 import { durationOptions, rentalTypeOptions } from "@/data/pricing";
 import { Input, Select, Textarea, Label, FieldError } from "@/components/ui/form-fields";
@@ -92,6 +92,7 @@ export function BookingForm({
   }
 
   const dark = variant === "onDark";
+  const minDate = todayISO();
 
   return (
     <form
@@ -172,7 +173,7 @@ export function BookingForm({
           <Label className={dark ? "text-white/60" : undefined} htmlFor="bf-date">
             Pickup Date
           </Label>
-          <Input id="bf-date" type="date" {...register("pickupDate")} />
+          <Input id="bf-date" type="date" min={minDate} {...register("pickupDate")} />
           <FieldError>{errors.pickupDate?.message}</FieldError>
         </div>
 
