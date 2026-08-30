@@ -1,0 +1,12 @@
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  return ["", "/fleet", "/pricing", "/about", "/contact"].map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: path === "" ? 1 : 0.8,
+  }));
+}
