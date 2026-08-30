@@ -8,7 +8,7 @@ import { BookingForm } from "@/components/BookingForm";
 export const metadata: Metadata = {
   title: "Contact | Book a Self Drive Car in Hyderabad",
   description:
-    "Contact Wow Self Drive Cars in Hyderabad. Call 9676861843, message on WhatsApp, or send a booking enquiry for a self-drive rental.",
+    "Contact Wow Self Drive Cars in Hyderabad. Call 9676861833, message on WhatsApp, or send a booking enquiry for a self-drive rental.",
   alternates: { canonical: "/contact" },
 };
 

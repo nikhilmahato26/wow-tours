@@ -48,10 +48,18 @@ export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
 
         <div className="mt-auto pt-5">
           {vehicle.rate ? (
-            <p className="text-sm text-graphite/60">
-              <span className="text-lg font-extrabold text-ink">{vehicle.rate.from}</span>{" "}
-              <span className="text-xs">/ {vehicle.rate.per}</span>
-            </p>
+            <div className="flex flex-col gap-0.5 text-sm text-graphite/60">
+              <p>
+                <span className="text-lg font-extrabold text-ink">{vehicle.rate.from}</span>{" "}
+                <span className="text-xs">/ {vehicle.rate.per}</span>
+              </p>
+              {vehicle.rate.from24 && vehicle.rate.per24 && (
+                <p>
+                  <span className="text-lg font-extrabold text-ink">{vehicle.rate.from24}</span>{" "}
+                  <span className="text-xs">/ {vehicle.rate.per24}</span>
+                </p>
+              )}
+            </div>
           ) : (
             <p className="text-sm font-semibold text-graphite/60">Contact for tariff</p>
           )}

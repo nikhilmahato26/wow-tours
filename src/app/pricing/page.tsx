@@ -9,7 +9,7 @@ import { Contact } from "@/components/Contact";
 export const metadata: Metadata = {
   title: "Pricing | Self Drive Car Rental Rates in Hyderabad",
   description:
-    "Self-drive rental pricing in Hyderabad. 5-seater from ₹1,500 / 12 hrs, 7-seater from ₹2,500 / 12 hrs, Thar and Thar Roxx tariffs. Weekly and monthly on request.",
+    "Self-drive rental pricing in Hyderabad. 5-seater and Innova from ₹1,500 / 12 hrs, 7-seater from ₹2,500 / 12 hrs, Thar and Thar Roxx tariffs. Weekly and monthly on request.",
   alternates: { canonical: "/pricing" },
 };
 

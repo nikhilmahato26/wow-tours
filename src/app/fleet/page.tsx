@@ -8,7 +8,7 @@ import { Contact } from "@/components/Contact";
 export const metadata: Metadata = {
   title: "Fleet | Self Drive Cars & SUVs in Hyderabad",
   description:
-    "Self-drive fleet from Wow Self Drive Cars in Hyderabad: Swift, Baleno, Fronx, Automatic Fronx, Innova Crysta, Fortuner, Thar and Thar Roxx.",
+    "Self-drive fleet from Wow Self Drive Cars in Hyderabad: Swift, Baleno, Fronx, Automatic Fronx, Innova, Innova Crysta, Fortuner Type 2, Fortuner Type 3, Thar and Thar Roxx.",
   alternates: { canonical: "/fleet" },
 };
 

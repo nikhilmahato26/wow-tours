@@ -9,9 +9,9 @@ export const business = {
   proprietor: "Osman Khan",
   proprietorUpper: "OSMAN KHAN",
 
-  phone: "9676861843",
-  phoneDisplay: "+91 96768 61843",
-  phoneHref: "tel:+919676861843",
+  phone: "9676861833",
+  phoneDisplay: "+91 96768 61833",
+  phoneHref: "tel:+919676861833",
 
   email: "Khan.osman41@gmail.com",
   emailHref: "mailto:Khan.osman41@gmail.com",
@@ -23,7 +23,7 @@ export const business = {
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Hyderabad%2C%20Telangana&t=&z=11&ie=UTF8&iwloc=&output=embed",
 
-  whatsappNumber: "919676861843",
+  whatsappNumber: "919676861833",
   whatsappDefaultMessage:
     "Hello Wow Self Drive Cars, I would like to enquire about a self-drive car rental.",
 

@@ -13,7 +13,7 @@ export function localBusinessJsonLd() {
     description:
       "Wow Self Drive Cars offers self-drive car rentals in Hyderabad with 12-hour, 24-hour, weekly, monthly and outstation rental options.",
     url: SITE_URL,
-    telephone: "+91-9676861843",
+    telephone: "+91-9676861833",
     email: business.email,
     priceRange: "₹₹",
     areaServed: { "@type": "City", name: "Hyderabad" },

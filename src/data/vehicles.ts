@@ -15,8 +15,8 @@ export type Vehicle = {
   transmission?: "Automatic";
   /** Availability highlight, shown as a badge. */
   highlight?: string;
-  /** Rate tier label + starting price, only where a supplied price list applies. */
-  rate?: { tier: string; from: string; per: string };
+  /** Rate tier label + starting prices. */
+  rate?: { tier: string; from: string; per: string; from24?: string; per24?: string };
   image: string;
   alt: string;
 };
@@ -30,8 +30,8 @@ export const vehicles: Vehicle[] = [
     name: "Swift",
     category: "5-Seater",
     categoryLabel: "5-Seater Hatchback",
-    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs / 150 KM" },
-    image: 'https://www.marutiseva.com/assets/images/new-gen-swift/car-03.png',
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://www.autovista.in/assets/img/new_cars_colour_variants/swift-colour-solid-fire-red.jpg',
     alt: "Compact 5-seater hatchback for self-drive rental in Hyderabad",
   },
   {
@@ -39,8 +39,8 @@ export const vehicles: Vehicle[] = [
     name: "Baleno",
     category: "5-Seater",
     categoryLabel: "5-Seater Hatchback",
-    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs / 150 KM" },
-    image: 'https://media.zigcdn.com/media/model/2026/Mar/front-1-4-left-1397016432_930x620.jpg',
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://imgd.aeplcdn.com/642x336/n/cw/ec/102663/baleno-exterior-right-front-three-quarter-69.png?isig=0&q=80',
     alt: "Premium 5-seater hatchback available for self-drive hire",
   },
   {
@@ -48,7 +48,7 @@ export const vehicles: Vehicle[] = [
     name: "Fronx",
     category: "5-Seater",
     categoryLabel: "5-Seater Crossover",
-    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs / 150 KM" },
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuupQIPmcNnDQPNP1fe9cf-aWXV1uh4a3HeDV6SrhowOqJ8E3R8fPg8vyT&s=10',
     alt: "5-seater crossover for city and weekend self-drive rentals",
   },
@@ -59,26 +59,44 @@ export const vehicles: Vehicle[] = [
     categoryLabel: "5-Seater Crossover",
     transmission: "Automatic",
     highlight: "Automatic Fronx available",
-    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs / 150 KM" },
-    image: 'https://goadriverentals.com/wp-content/uploads/2025/12/fronx.webp',
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/147329/maruti-suzuki-fronx-left-front-three-quarter2.jpeg?isig=0&wm=0',
     alt: "Automatic transmission Fronx crossover for self-drive hire in Hyderabad",
+  },
+  {
+    slug: "innova",
+    name: "Innova",
+    category: "Premium",
+    categoryLabel: "7-Seater MPV",
+    rate: { tier: "Innova tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://imgd.aeplcdn.com/1200x900/n/cw/ec/51540/toyota-innova-crysta-left-front-three-quarter0.jpeg?wm=0',
+    alt: "Toyota Innova 7-seater MPV available for self-drive rental in Hyderabad",
   },
   {
     slug: "innova-crysta",
     name: "Innova Crysta",
     category: "Premium",
     categoryLabel: "Premium MPV",
-    rate: { tier: "7-Seater tariff", from: "₹2,500", per: "12 hrs / 150 KM" },
+    rate: { tier: "Crysta tariff", from: "₹3,000", per: "12 hrs", from24: "₹4,500", per24: "24 hrs" },
     image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/222736/innova-crysta-2026-exterior-right-front-three-quarter.png?isig=0&q=80',
     alt: "Premium MPV for family trips and outstation self-drive rentals",
   },
   {
-    slug: "fortuner",
-    name: "Fortuner",
+    slug: "fortuner-type-2",
+    name: "Fortuner Type 2",
     category: "Premium",
     categoryLabel: "Premium SUV",
-    rate: { tier: "7-Seater tariff", from: "₹2,500", per: "12 hrs / 150 KM" },
-    image: 'https://gaadiwaadi.com/wp-content/uploads/2026/02/Next-Gen-Toyota-Fortuner-Rendered-1260x720.jpg',
+    rate: { tier: "Fortuner Type 2 tariff", from: "₹3,500", per: "12 hrs", from24: "₹4,000", per24: "24 hrs" },
+    image: 'https://autoretails.com/wp-content/uploads/Fortuner-front-ty2.jpg',
+    alt: "Premium full-size SUV for self-drive hire in Hyderabad",
+  },
+  {
+    slug: "fortuner-type-3",
+    name: "Fortuner Type 3",
+    category: "Premium",
+    categoryLabel: "Premium SUV",
+    rate: { tier: "Fortuner Type 3 tariff", from: "₹4,500", per: "12 hrs", from24: "₹6,000", per24: "24 hrs" },
+    image: 'https://5.imimg.com/data5/ECOM/Default/2024/2/391255557/BK/LP/RD/5183134/legender-500x500.jpg',
     alt: "Premium full-size SUV for self-drive hire in Hyderabad",
   },
   {
@@ -86,7 +104,7 @@ export const vehicles: Vehicle[] = [
     name: "Thar",
     category: "Adventure",
     categoryLabel: "Adventure SUV",
-    rate: { tier: "Thar tariff", from: "₹3,000", per: "12 hrs / 150 KM" },
+    rate: { tier: "Thar tariff", from: "₹3,000", per: "12 hrs", from24: "₹4,000", per24: "24 hrs" },
     image: 'https://imgd.aeplcdn.com/642x336/n/cw/ec/204996/thar-2025-exterior-right-front-three-quarter-5.png?isig=0&q=80',
     alt: "Off-road ready adventure SUV for weekend and outstation self-drive trips",
   },
@@ -95,7 +113,7 @@ export const vehicles: Vehicle[] = [
     name: "Thar Roxx",
     category: "Adventure",
     categoryLabel: "Adventure SUV",
-    rate: { tier: "Thar Roxx tariff", from: "₹4,000", per: "12 hrs / 150 KM" },
+    rate: { tier: "Thar Roxx tariff", from: "₹4,000", per: "12 hrs", from24: "₹6,000", per24: "24 hrs" },
     image: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Thar-ROXX/11939/1778649951124/front-left-side-47.jpg?imwidth=420&impolicy=resize',
     alt: "5-door adventure SUV for premium self-drive road trips from Hyderabad",
   },

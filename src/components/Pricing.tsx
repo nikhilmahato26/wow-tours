@@ -7,7 +7,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { buttonClasses } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const categories = ["5 Seater", "7 Seater", "Thar", "Thar Roxx"] as const;
+const categories = Array.from(new Set(priceSlots.map((s) => s.category)));
 
 export function Pricing() {
   return (
@@ -99,6 +99,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-10 max-w-2xl text-sm leading-relaxed text-graphite/60">
+          <strong className="text-ink">Out of Telangana:</strong> An additional charge of ₹500/Day applies for out of state travel.<br />
           Weekly, monthly and outstation rentals are available. Pricing for those is
           shared on request.{" "}
           <a

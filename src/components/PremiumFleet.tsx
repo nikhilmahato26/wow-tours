@@ -5,11 +5,13 @@ import { SmartImage } from "@/components/SmartImage";
 import { Reveal } from "@/components/motion/Reveal";
 import { buttonClasses } from "@/components/ui/button";
 
-const premiumSlugs = ["innova-crysta", "fortuner", "thar", "thar-roxx"];
+const premiumSlugs = ["innova", "innova-crysta", "fortuner-type-2", "fortuner-type-3", "thar", "thar-roxx"];
 
 const blurbs: Record<string, string> = {
+  innova: "Spacious and reliable 7-seater MPV for family and group travels.",
   "innova-crysta": "Room for the whole group on long comfortable drives.",
-  fortuner: "A commanding SUV built for highways and rough patches alike.",
+  "fortuner-type-2": "A commanding SUV built for highways and rough patches alike.",
+  "fortuner-type-3": "The latest Fortuner styling with premium interior comfort.",
   thar: "The classic weekend escape machine for open roads.",
   "thar-roxx": "More space, more comfort, same go-anywhere character.",
 };
@@ -23,7 +25,7 @@ export function PremiumFleet() {
         <SectionHeading
           tone="dark"
           title="Premium & Adventure Fleet"
-          intro="For family trips, weekend getaways and outstation journeys. Pick the Innova Crysta, Fortuner, Thar or Thar Roxx and drive it yourself."
+          intro="For family trips, weekend getaways and outstation journeys. Pick the Innova, Innova Crysta, Fortuner, Thar or Thar Roxx and drive it yourself."
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
@@ -44,10 +46,18 @@ export function PremiumFleet() {
                   <h3 className="text-2xl font-extrabold text-white">{v.name}</h3>
                   <p className="mt-1 max-w-sm text-sm text-white/70">{blurbs[v.slug]}</p>
                   {v.rate ? (
-                    <p className="mt-3 text-sm text-white/80">
-                      <span className="text-lg font-bold text-gold">{v.rate.from}</span>{" "}
-                      / {v.rate.per}
-                    </p>
+                    <div className="mt-3 flex flex-col gap-0.5 text-sm text-white/80">
+                      <p>
+                        <span className="text-lg font-bold text-gold">{v.rate.from}</span>{" "}
+                        / {v.rate.per}
+                      </p>
+                      {v.rate.from24 && v.rate.per24 && (
+                        <p>
+                          <span className="text-lg font-bold text-gold">{v.rate.from24}</span>{" "}
+                          / {v.rate.per24}
+                        </p>
+                      )}
+                    </div>
                   ) : null}
                 </div>
               </article>
