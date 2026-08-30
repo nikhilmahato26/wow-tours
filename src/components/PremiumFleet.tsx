@@ -65,10 +65,13 @@ export function PremiumFleet() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-center gap-6">
           <Link href="/#book" className={buttonClasses({ variant: "gold", size: "lg" })}>
             Book a Premium Vehicle
           </Link>
+          <p className="text-center text-sm font-medium text-white/60">
+            <strong className="text-white text-sm">Note:</strong> An additional charge of ₹500/Day applies for Out of Telangana travel.
+          </p>
         </div>
       </Container>
     </Section>

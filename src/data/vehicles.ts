@@ -12,7 +12,7 @@ export type Vehicle = {
   category: VehicleCategory;
   categoryLabel: string;
   /** Only shown where explicitly supplied. */
-  transmission?: "Automatic";
+  transmission?: "Automatic" | "Manual";
   /** Availability highlight, shown as a badge. */
   highlight?: string;
   /** Rate tier label + starting prices. */
@@ -62,6 +62,27 @@ export const vehicles: Vehicle[] = [
     rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
     image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/147329/maruti-suzuki-fronx-left-front-three-quarter2.jpeg?isig=0&wm=0',
     alt: "Automatic transmission Fronx crossover for self-drive hire in Hyderabad",
+  },
+  {
+    slug: "seltos-manual",
+    name: "Kia Seltos Manual",
+    category: "5-Seater",
+    categoryLabel: "5-Seater SUV",
+    transmission: "Manual",
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/192817/seltos-exterior-left-front-three-quarter-65.jpeg?isig=0&q=80',
+    alt: "Kia Seltos manual transmission available for self-drive hire in Hyderabad",
+  },
+  {
+    slug: "seltos-automatic",
+    name: "Kia Seltos Automatic",
+    category: "5-Seater",
+    categoryLabel: "5-Seater SUV",
+    transmission: "Automatic",
+    highlight: "Automatic Seltos",
+    rate: { tier: "5-Seater tariff", from: "₹1,500", per: "12 hrs", from24: "₹2,500", per24: "24 hrs" },
+    image: 'https://stimg.cardekho.com/images/carexteriorimages/930x620/Kia/Seltos/13094/1778328978290/front-left-side-47.jpg',
+    alt: "Automatic Kia Seltos SUV for premium self-drive rentals",
   },
   {
     slug: "innova",

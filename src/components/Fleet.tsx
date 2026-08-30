@@ -30,6 +30,10 @@ export function Fleet() {
             </Reveal>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-sm font-medium text-graphite/60">
+          <strong className="text-ink text-sm">Note:</strong> An additional charge of ₹500/Day applies for Out of Telangana travel.
+        </p>
       </Container>
     </Section>
   );
